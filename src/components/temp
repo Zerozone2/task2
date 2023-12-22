@@ -1,0 +1,8 @@
+<p>{{ file.name }}</p>
+            <button class="libraryCrlBtn" @click="deleteFile(index)">Delete</button>
+            <button class="libraryCrlBtn" @click="showFile(index)" v-show="!file.show">Show File</button>
+            <button class="libraryCrlBtn" @click="hidleFile(index)" v-show="file.show">Hide File</button>
+            
+            <div v-if="file.show" class="frame-container">
+              <iframe v-bind:src="file.url"></iframe>
+            </div>
