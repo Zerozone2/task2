@@ -6,7 +6,7 @@
 
     <Folder @updateFolderFn="updateFolderFn" @editFolder="editFolder" @closeFolder="closeFolder" @deleteFolder="deleteFolder" :mails="mails" :updateFolder="updateFolder" :showFolder="showFolder" :curFolder="curFolder"></Folder>
 
-    <div id="folderList"  >
+    <div id="folderList"  class="toggle">
 
         <div id="AddBtn">
            
@@ -126,6 +126,7 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     border-radius: 5%;
+    display: none;
 }
 
 #AddBtn{

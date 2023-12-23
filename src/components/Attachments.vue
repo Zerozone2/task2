@@ -156,6 +156,7 @@ export default {
 #fileDropdown {
   text-overflow: ellipsis; 
   border: 0px solid;
+  max-width: 150px;
 }
 
 #fileDropdown:focus{

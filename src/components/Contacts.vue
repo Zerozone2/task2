@@ -3,13 +3,13 @@
         <i class="fa-solid fa-address-book" style="color: #172154;"></i>
     </span>
 
-    <div>
+    <div class="toggle">
         <ContactInfo @deleteContact="deleteContact" @editContact="editContact" @closeContact="closeContact" @updateContactFn="updateContactFn"  :contactInfo="curContact" :updateContact="updateContact" :showContact="showContact"></ContactInfo>
     </div>
 
 
 
-    <div id="contactList"  >
+    <div id="contactList"  class="toggle">
         <div>
             <input type="text" v-model="search" id="searchBtn" @keyup.enter="searchContact"/>
             
@@ -158,6 +158,8 @@ p{
     top: 50%;
     transform: translateY(-50%);
     border-radius: 5%;
+    display: none;
+
 }
 
 #contactItem{
