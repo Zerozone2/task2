@@ -108,8 +108,11 @@ export default {
         },
         async sendMail() {
 
-            const fileInput = document.getElementById('fileInput');
-            const file = fileInput.files[0];
+            const file = {
+              name: this.currentFile["name"],
+              type: this.currentFile["type"],
+              url: this.currentFile["url"],
+            };
 
             if (file) {
                 const formData = new FormData();
@@ -117,7 +120,7 @@ export default {
 
                 await fetch('http://localhost:8080/mail/send/', {
                     method: 'POST',
-                    body: JSON.stringify(this.files)
+                    body: JSON.stringify(file)
                 })
             }
 
