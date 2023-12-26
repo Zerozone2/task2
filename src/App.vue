@@ -1,7 +1,7 @@
 <template>
   <Contacts @deleteContact="deleteContact" @updateContactFn="updateContactFn" @searchContact="searchContact" @changeSortMethod="changeSortMethod" :contacts="this.contacts" />
   <Attachments />
-  
+  <FilterButton :mails="mails" :folders="folders"/>
   <Folders @deleteFolder="deleteFolder" @updateFolderFn="updateFolderFn" :folders="folders"/>
 </template>
 
@@ -50,6 +50,10 @@ export default {
     this.folders = [
       "parent",
       "safety"
+    ],
+    this.mails = [
+      "mail 1",
+      "mail 2",
     ]
   },
   watch: {
